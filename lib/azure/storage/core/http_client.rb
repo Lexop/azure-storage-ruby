@@ -55,7 +55,7 @@ module Azure::Storage::Core
                         URI::parse(ENV['HTTPS_PROXY'])
                       end || nil
       Faraday.new(uri, ssl: ssl_options, proxy: proxy_options) do |conn|
-        conn.use FaradayMiddleware::FollowRedirects
+        conn.use Faraday::FollowRedirects::Middleware
         conn.adapter Faraday.default_adapter
       end
     end
