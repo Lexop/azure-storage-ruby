@@ -21,7 +21,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #--------------------------------------------------------------------------
-require 'azure/core/http/http_error'
 require 'integration/test_helper'
 require 'azure/storage/blob/blob_service'
 

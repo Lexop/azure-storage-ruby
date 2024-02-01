@@ -23,7 +23,6 @@
 #--------------------------------------------------------------------------
 require 'integration/test_helper'
 require "azure/storage/blob/blob_service"
-require "azure/core/http/http_error"
 
 describe Azure::Storage::Blob::BlobService do
   subject { Azure::Storage::Blob::BlobService.new }

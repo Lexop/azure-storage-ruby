@@ -13,7 +13,6 @@
 # limitations under the License.
 #--------------------------------------------------------------------------
 require 'cgi'
-require 'azure/core/auth/signer'
 
 module Azure
   module Core

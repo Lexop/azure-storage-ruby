@@ -23,7 +23,6 @@
 #--------------------------------------------------------------------------
 require 'integration/test_helper'
 require "azure/storage/queue/queue_service"
-require "azure/core/http/http_error"
 
 describe Azure::Storage::Queue::QueueService do
   let(:user_agent_prefix) { 'azure_storage_ruby_integration_test' }

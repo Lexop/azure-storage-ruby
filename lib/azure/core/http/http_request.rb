@@ -16,11 +16,6 @@ require 'digest/md5'
 require 'base64'
 require 'net/http'
 require 'time'
-
-require 'azure/core/version'
-require 'azure/core/http/http_response'
-require 'azure/core/http/retry_policy'
-require 'azure/core/default'
 require 'azure/http_response_helper'
 
 module Azure

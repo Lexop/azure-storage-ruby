@@ -24,7 +24,6 @@
 require 'integration/test_helper'
 require "azure/storage/table/table_service"
 require "azure/storage/table/query"
-require "azure/core/http/http_error"
 
 describe Azure::Storage::Table::TableService do 
   describe "#query_entities" do

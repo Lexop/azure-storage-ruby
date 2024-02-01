@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #--------------------------------------------------------------------------
-require 'azure/core/filtered_service'
-require 'azure/core/http/signer_filter'
-require 'azure/core/auth/shared_key'
 
 module Azure
   module Core

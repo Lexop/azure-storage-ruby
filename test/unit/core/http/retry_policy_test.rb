@@ -22,7 +22,6 @@
 # THE SOFTWARE.
 #--------------------------------------------------------------------------
 require 'test_helper'
-require 'azure/core/http/retry_policy'
 require 'azure/storage/core/filter/linear_retry_filter'
 require 'azure/storage/core/filter/exponential_retry_filter'
 
