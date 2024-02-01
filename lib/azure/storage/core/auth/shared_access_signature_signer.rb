@@ -22,8 +22,6 @@
 # THE SOFTWARE.
 #--------------------------------------------------------------------------
 
-require 'azure/core/auth/signer'
-
 module Azure::Storage::Core
   module Auth
     class SharedAccessSignatureSigner < Azure::Core::Auth::Signer

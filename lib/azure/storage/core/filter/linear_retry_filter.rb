@@ -21,8 +21,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #--------------------------------------------------------------------------
-require 'azure/core'
-require 'azure/core/http/retry_policy'
 
 module Azure::Storage::Core::Filter
   class LinearRetryPolicyFilter < RetryPolicyFilter

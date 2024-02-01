@@ -22,7 +22,6 @@
 # THE SOFTWARE.
 #--------------------------------------------------------------------------
 
-require 'azure/core/signed_service'
 require 'azure/storage/core'
 require 'azure/storage/service/storage_service_properties'
 

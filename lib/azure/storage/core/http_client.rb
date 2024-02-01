@@ -21,7 +21,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #--------------------------------------------------------------------------
-
+p __FILE__
 module Azure::Storage::Core
   module HttpClient
     # Returns the http agent based on uri

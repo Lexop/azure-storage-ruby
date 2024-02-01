@@ -22,27 +22,30 @@
 # THE SOFTWARE.
 #--------------------------------------------------------------------------
 
-require_relative '../../core/autoload'
-
 module Azure
-  module Storage
-    module Core
-      autoload :HttpClient,                     'azure/storage/core/http_client'
-      autoload :Utility,                        'azure/storage/core/utility'
-      autoload :Logger,                         'azure/storage/core/utility'
-      autoload :Error,                          'azure/storage/core/error'
-      
-      module Auth
-        autoload :SharedKey,                    'azure/storage/core/auth/shared_key.rb'
-        autoload :SharedAccessSignature,        'azure/storage/core/auth/shared_access_signature_generator.rb'
-        autoload :SharedAccessSignatureSigner,  'azure/storage/core/auth/shared_access_signature_signer.rb'
-      end
-      
-      module Filter
-        autoload :RetryPolicyFilter,            'azure/storage/core/filter/retry_filter'
-        autoload :LinearRetryPolicyFilter,      'azure/storage/core/filter/linear_retry_filter'
-        autoload :ExponentialRetryPolicyFilter, 'azure/storage/core/filter/exponential_retry_filter'
-      end
+  module Core
+    autoload :Default,         './lib/azure/core/default'
+    autoload :Utility,         './lib/azure/core/utility'
+    autoload :Error,           './lib/azure/core/error'
+    autoload :FilteredService, './lib/azure/core/filtered_service'
+    autoload :Service,         './lib/azure/core/service'
+    autoload :SignedService,   './lib/azure/core/signed_service'
+    autoload :Version,         './lib/azure/core/version'
+
+    module Auth
+      autoload :SharedKey,     './lib/azure/core/auth/shared_key'
+      autoload :Authorizer,    './lib/azure/core/auth/authorizer'
+      autoload :SharedKeyLite, './lib/azure/core/auth/shared_key_lite'
+      autoload :Signer,        './lib/azure/core/auth/signer'
+    end
+
+    module Http
+      autoload :DebugFilter,   './lib/azure/core/http/debug_filter'
+      autoload :HTTPError,     './lib/azure/core/http/http_error'
+      autoload :HTTPFilter,    './lib/azure/core/http/http_filter'
+      autoload :HttpRequest,   './lib/azure/core/http/http_request'
+      autoload :HttpResponse,  './lib/azure/core/http/http_response'
+      autoload :RetryPolicy,   './lib/azure/core/http/retry_policy'
     end
   end
 end

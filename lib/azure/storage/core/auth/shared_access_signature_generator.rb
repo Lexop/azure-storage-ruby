@@ -24,7 +24,6 @@
 
 require 'azure/storage/core'
 require 'azure/storage/client_options_error'
-require 'azure/core/auth/signer'
 require 'time'
 require 'uri'
 

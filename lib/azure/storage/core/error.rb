@@ -21,7 +21,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 #--------------------------------------------------------------------------
-require 'azure/core'
 
 module Azure::Storage::Core
   # Superclass for errors generated from this library, so people can
