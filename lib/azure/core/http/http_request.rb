@@ -16,7 +16,6 @@ require 'digest/md5'
 require 'base64'
 require 'net/http'
 require 'time'
-require 'azure/http_response_helper'
 
 module Azure
   module Core
@@ -24,7 +23,6 @@ module Azure
       # Represents a HTTP request can perform synchronous queries to a
       # HTTP server, returning a HttpResponse
       class HttpRequest
-        include Azure::HttpResponseHelper
         alias_method :_method, :method
 
         # The HTTP method to use (:get, :post, :put, :delete, etc...)
@@ -147,6 +145,18 @@ module Azure
           response.uri = uri
           raise response.error if !response.success? && !@has_retry_filter
           response
+        end
+
+        def set_up_response(method, url, conn, headers ,body)
+          conn.run_request(method, url, nil, nil) do |req|
+            req.body = body if body
+            req.headers = headers if headers
+            unless headers.nil?
+              keep_alive = headers['Keep-Alive'] || headers['keep-alive']
+              req.options[:timeout] = keep_alive.split('=').last.to_i unless keep_alive.nil?
+            end
+            req.options[:open_timeout] ||= 60
+          end
         end
 
         private

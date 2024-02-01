@@ -24,28 +24,32 @@
 
 module Azure
   module Core
-    autoload :Default,         './lib/azure/core/default'
-    autoload :Utility,         './lib/azure/core/utility'
-    autoload :Error,           './lib/azure/core/error'
-    autoload :FilteredService, './lib/azure/core/filtered_service'
-    autoload :Service,         './lib/azure/core/service'
-    autoload :SignedService,   './lib/azure/core/signed_service'
-    autoload :Version,         './lib/azure/core/version'
+
+    ROOT_PATH = File.dirname(__FILE__)
+
+    autoload :Default,         "#{ROOT_PATH}/default"
+    autoload :Utility,         "#{ROOT_PATH}/utility"
+    autoload :Error,           "#{ROOT_PATH}/error"
+    autoload :FilteredService, "#{ROOT_PATH}/filtered_service"
+    autoload :Service,         "#{ROOT_PATH}/service"
+    autoload :SignedService,   "#{ROOT_PATH}/signed_service"
+    autoload :Version,         "#{ROOT_PATH}/version"
 
     module Auth
-      autoload :SharedKey,     './lib/azure/core/auth/shared_key'
-      autoload :Authorizer,    './lib/azure/core/auth/authorizer'
-      autoload :SharedKeyLite, './lib/azure/core/auth/shared_key_lite'
-      autoload :Signer,        './lib/azure/core/auth/signer'
+      autoload :SharedKey,     "#{ROOT_PATH}/auth/shared_key"
+      autoload :Authorizer,    "#{ROOT_PATH}/auth/authorizer"
+      autoload :SharedKeyLite, "#{ROOT_PATH}/auth/shared_key_lite"
+      autoload :Signer,        "#{ROOT_PATH}/auth/signer"
     end
 
     module Http
-      autoload :DebugFilter,   './lib/azure/core/http/debug_filter'
-      autoload :HTTPError,     './lib/azure/core/http/http_error'
-      autoload :HTTPFilter,    './lib/azure/core/http/http_filter'
-      autoload :HttpRequest,   './lib/azure/core/http/http_request'
-      autoload :HttpResponse,  './lib/azure/core/http/http_response'
-      autoload :RetryPolicy,   './lib/azure/core/http/retry_policy'
+      autoload :DebugFilter,   "#{ROOT_PATH}/http/debug_filter"
+      autoload :HTTPError,     "#{ROOT_PATH}/http/http_error"
+      autoload :HttpFilter,    "#{ROOT_PATH}/http/http_filter"
+      autoload :HttpRequest,   "#{ROOT_PATH}/http/http_request"
+      autoload :HttpResponse,  "#{ROOT_PATH}/http/http_response"
+      autoload :RetryPolicy,   "#{ROOT_PATH}/http/retry_policy"
+      autoload :SignerFilter,   "#{ROOT_PATH}/http/signer_filter"
     end
   end
 end
