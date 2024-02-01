@@ -28,7 +28,6 @@ require 'base64'
 require 'openssl'
 require 'uri'
 require 'faraday'
-require 'faraday_middleware'
 
 require 'azure/storage/autoload'
 
